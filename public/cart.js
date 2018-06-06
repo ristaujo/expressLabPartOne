@@ -1,19 +1,15 @@
 "use strict";
 
 const cart = {
-  // TODO: Create a template to display all the students from this class
   template: `
-  <section ng-repeat="item in $ctrl.items">
-    <p>Product: {{item.product}}</p>
+  <h1>Grocery Time</h1>
+  <section ng-repeat="item in $ctrl.items" class="main">
+    <h2>{{item.product}}</h2>
     <p>Price: $ {{item.price}}</p>
     <p>Quantity: {{item.quantity}}</p>
-
-
-
   `,
   controller: ["CartService", function(CartService) {
     const vm = this;
-    // TODO: Call the StudentService to retrieve the list of the students
     CartService.getAllItems().then((response) => {
       vm.items = response.data;
     });

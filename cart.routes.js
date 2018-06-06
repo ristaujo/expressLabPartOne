@@ -34,8 +34,8 @@ cartRouter.post("/items", (request, response) => {
     quantity: request.body.quantity,
     id: idCounter++
   });
-  response.send(items);
   console.log(request.body);
+  response.send(items);
 });
 cartRouter.delete("/items/:id", (request, response) => {
   for (let item of items) {
