@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cart = require("./cart.routes");
 
+
 app.use(bodyParser.json());
 app.use("/portal", cart);
 app.use(express.static(__dirname + "/public")); 
