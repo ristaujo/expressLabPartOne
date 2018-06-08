@@ -19,7 +19,7 @@ cartRouter.post("/items", (request, response) => {
   });
 });
 cartRouter.delete("/items/:id", (request, response) => {
-  pool.query("DELETE FROM shoppingCart WHERE id=$1::int", [request.params.id]).then(() => {
+  pool.query("DELETE FROM shoppingCart WHERE id=$1", [request.params.id]).then(() => {
     pool.query("SELECT * FROM shoppingCart ORDER BY id").then((result) => {
       response.send(result.rows);
     });
