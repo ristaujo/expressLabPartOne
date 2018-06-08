@@ -66,4 +66,8 @@ h1 {
 
 .bot-input {
   margin-bottom: 10px;
+  background-color: rgb(204, 236, 255);
+  border-style: none;
+  margin-left: 5%;
+  font-size: 14px;
 }

@@ -12,8 +12,8 @@ const cart = {
   <section class="card-container">
     <section ng-repeat="item in $ctrl.items" class="main">
       <i class="material-icons delete" ng-click="$ctrl.deleteProduct(item.id);">clear</i>
-      <p>Product:</p><input ng-blur="$ctrl.updateProduct(item);" ng-model="item.product" >
-      <p>Price:</p><input ng-blur="$ctrl.updateProduct(item);" ng-model="item.price">
+      <p>Product:</p><input ng-blur="$ctrl.updateProduct(item);" ng-model="item.product" class="bot-input">
+      <p>Price:</p><input ng-blur="$ctrl.updateProduct(item);" ng-model="item.price" class="bot-input">
       <p>Quantity:</p><input ng-blur="$ctrl.updateProduct(item);" ng-model="item.quantity" class="bot-input">
     </section>
   </section>
